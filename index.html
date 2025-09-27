@@ -27,6 +27,19 @@
       width: 100%; height: 100%;
       background: rgba(0,0,0,0.5);
     }
+
+    /* LOGO */
+    .logo {
+      position: relative;
+      z-index: 1;
+      width: 120px;
+      height: auto;
+      margin-bottom: 1rem;
+      border-radius: 20px; /* rounded edges */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      animation: fadeInDown 1s ease;
+    }
+
     header h1, header p {
       position: relative;
       z-index: 1;
@@ -42,212 +55,138 @@
       animation: fadeInUp 1s ease;
     }
 
-    /* CONTAINER */
-    .container {
-      max-width: 1200px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
+    .container { max-width: 1200px; margin: 3rem auto; padding: 0 1rem; }
+    h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; color: #cc6600; }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2rem;
-      color: #cc6600;
-    }
-
-    /* PRODUCTS GRID */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
     .product {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-      overflow: hidden;
-      text-align: center;
-      cursor: pointer;
+      background: white; border-radius: 16px; box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      overflow: hidden; text-align: center; cursor: pointer;
       transition: transform 0.3s, box-shadow 0.3s;
     }
-    .product:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-    }
-    .product img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .product h3 {
-      margin: 0.8rem 0;
-      font-size: 1.2rem;
-      color: #cc6600;
-    }
+    .product:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.2); }
+    .product img { width: 100%; height: 200px; object-fit: cover; }
+    .product h3 { margin: 0.8rem 0; font-size: 1.2rem; color: #cc6600; }
 
-    /* ORDER BUTTON */
-    .order {
-      text-align: center;
-      margin: 3rem 0;
-    }
+    .order { text-align: center; margin: 3rem 0; }
     .order a {
       background: linear-gradient(135deg, #ff9900, #cc6600);
-      color: white;
-      text-decoration: none;
-      padding: 14px 30px;
-      border-radius: 10px;
-      font-size: 1.3rem;
-      transition: transform 0.2s;
+      color: white; text-decoration: none; padding: 14px 30px;
+      border-radius: 10px; font-size: 1.3rem; transition: transform 0.2s;
     }
-    .order a:hover {
-      transform: scale(1.1);
-    }
+    .order a:hover { transform: scale(1.1); }
 
-    /* POPUP MODAL */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
+    .modal { display: none; position: fixed; top:0; left:0; width:100%; height:100%;
+      background: rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:1000; }
     .modal-content {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 400px;
-      text-align: center;
-      position: relative;
-      animation: zoomIn 0.3s ease;
+      background: white; padding: 2rem; border-radius: 12px; max-width: 400px;
+      text-align:center; position:relative; animation: zoomIn 0.3s ease;
     }
-    .modal-content h3 {
-      color: #cc6600;
-      margin-bottom: 1rem;
-    }
-    .modal-content p {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-    .close-btn {
-      position: absolute;
-      top: 10px; right: 15px;
-      font-size: 20px;
-      cursor: pointer;
-      color: #999;
-    }
-    .close-btn:hover {
-      color: #333;
-    }
+    .modal-content h3 { color: #cc6600; margin-bottom: 1rem; }
+    .modal-content p { font-size: 1rem; margin-bottom: 1rem; }
+    .close-btn { position: absolute; top:10px; right:15px; font-size:20px; cursor:pointer; color:#999; }
+    .close-btn:hover { color:#333; }
 
-    /* ANIMATIONS */
-    @keyframes fadeInDown {
-      from {opacity:0; transform: translateY(-20px);}
-      to {opacity:1; transform: translateY(0);}
-    }
-    @keyframes fadeInUp {
-      from {opacity:0; transform: translateY(20px);}
-      to {opacity:1; transform: translateY(0);}
-    }
-    @keyframes zoomIn {
-      from {transform: scale(0.8); opacity: 0;}
-      to {transform: scale(1); opacity: 1;}
-    }
+    @keyframes fadeInDown { from {opacity:0; transform: translateY(-20px);} to {opacity:1; transform: translateY(0);} }
+    @keyframes fadeInUp { from {opacity:0; transform: translateY(20px);} to {opacity:1; transform: translateY(0);} }
+    @keyframes zoomIn { from {transform: scale(0.8); opacity:0;} to {transform: scale(1); opacity:1;} }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>🌿 Truehima Naturals 🌿</h1>
-    <p>Premium Natural Products from the Himalayas</p>
-  </header>
+<header>
+  <!-- LOGO -->
+  <img src="images/Logo.jpg" alt="Truehima Naturals Logo" class="logo">
+  <h1>🌿 Truehima Naturals 🌿</h1>
+  <p>Premium Natural Products from the Himalayas</p>
+</header>
 
-  <!-- PRODUCTS -->
-  <div class="container">
-    <h2>✨ Our Products ✨</h2>
-    <div class="products">
+<div class="container">
+  <h2>✨ Our Products ✨</h2>
+  <div class="products">
 
-      <div class="product" onclick="openModal('Saffron', 'Handpicked pure Kashmiri saffron strands for health & wellness.')">
-        <img src="images/saffron.jpg" alt="Saffron">
-        <h3>Saffron</h3>
-      </div>
-
-      <div class="product" onclick="openModal('Apricot', 'Fresh Himalayan apricots rich in vitamins & antioxidants.')">
-        <img src="images/apricot.jpg" alt="Apricot">
-        <h3>Apricot</h3>
-      </div>
-
-      <div class="product" onclick="openModal('Walnuts', 'Crunchy Kashmiri walnuts full of omega-3 goodness.')">
-        <img src="images/walnuts.jpg" alt="Walnuts">
-        <h3>Walnuts</h3>
-      </div>
-
-      <div class="product" onclick="openModal('Pure Himalayan Shilajit', 'Authentic, natural shilajit resin for strength & vitality.')">
-        <img src="images/shilajit.jpg" alt="Shilajit">
-        <h3>Pure Himalayan Shilajit</h3>
-      </div>
-
-      <div class="product" onclick="openModal('Blueberry', 'Delicious blueberries, great for smoothies & snacking.')">
-        <img src="images/blueberry.jpg" alt="Blueberry">
-        <h3>Blueberry</h3>
-      </div>
-
-      <div class="product" onclick="openModal('Cranberry', 'Tangy dried cranberries packed with antioxidants.')">
-        <img src="images/cranberry.jpg" alt="Cranberry">
-        <h3>Cranberry</h3>
-      </div>
-
-      <div class="product" onclick="openModal('High Protein Muesli', 'Healthy breakfast mix of oats, nuts, and dry fruits.')">
-        <img src="images/high_protein_muesali.jpeg" alt="Muesli">
-        <h3>High Protein Muesli</h3>
-      </div>
-
-      <div class="product" onclick="openModal('Kiwi', 'Juicy Himalayan kiwi rich in Vitamin C.')">
-        <img src="images/kiwi.jpg" alt="Kiwi">
-        <h3>Kiwi</h3>
-      </div>
-
-      <div class="product" onclick="openModal('Mamra Badam', 'Premium mamra almonds known for high oil content.')">
-        <img src="images/mamra_badam.jpg" alt="Mamra Badam">
-        <h3>Mamra Badam</h3>
-      </div>
-
-      <div class="product" onclick="openModal('Kashmiri Kahwa', 'Traditional Kashmiri green tea with saffron & spices.')">
-        <img src="images/kashmiri_kahwa.jpg" alt="Kashmiri Kahwa">
-        <h3>Kashmiri Kahwa</h3>
-      </div>
-
+    <div class="product" onclick="openModal('Saffron', 'Saffron improves immunity, enhances memory, and boosts mood. It also adds premium flavor to dishes.')">
+      <img src="images/saffron.jpg" alt="Saffron">
+      <h3>Saffron</h3>
     </div>
 
-    <!-- ORDER SECTION -->
-    <div class="order">
-      <h2>📩 Place Your Order</h2>
-      <p>Click below to fill out the order form.</p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSenX7ibv2AORWIiLmsUKj0qDKWVKm_Lbz13GY9KRxyQzUHsfg/viewform?usp=header" target="_blank">Order Now</a>
+    <div class="product" onclick="openModal('Apricot', 'Apricots are rich in vitamins A & C, improve digestion, and promote healthy skin and energy.')">
+      <img src="images/apricot.jpg" alt="Apricot">
+      <h3>Apricot</h3>
     </div>
+
+    <div class="product" onclick="openModal('Walnuts', 'Walnuts are high in omega-3s, supporting heart, brain, and joint health.')">
+      <img src="images/walnuts.jpg" alt="Walnuts">
+      <h3>Walnuts</h3>
+    </div>
+
+    <div class="product" onclick="openModal('Shilajit', 'Shilajit increases strength, stamina, and overall vitality naturally.')">
+      <img src="images/shilajit.jpg" alt="Shilajit">
+      <h3>Shilajit</h3>
+    </div>
+
+    <div class="product" onclick="openModal('Blueberry', 'Blueberries are antioxidants-rich, supporting immunity, brain function, and healthy skin.')">
+      <img src="images/blueberry.jpg" alt="Blueberry">
+      <h3>Blueberry</h3>
+    </div>
+
+    <div class="product" onclick="openModal('Cranberry', 'Cranberries help maintain urinary tract health and are packed with antioxidants.')">
+      <img src="images/cranberry.jpg" alt="Cranberry">
+      <h3>Cranberry</h3>
+    </div>
+
+    <div class="product" onclick="openModal('High Protein Muesli', 'A healthy breakfast mix of oats, nuts, and dry fruits providing energy and nutrition.')">
+      <img src="images/high_protein_muesali.jpeg" alt="Muesli">
+      <h3>High Protein Muesli</h3>
+    </div>
+
+    <div class="product" onclick="openModal('Kiwi', 'Kiwi is rich in Vitamin C, boosts immunity, aids digestion, and improves skin health.')">
+      <img src="images/kiwi.jpg" alt="Kiwi">
+      <h3>Kiwi</h3>
+    </div>
+
+    <div class="product" onclick="openModal('Mamra Badam', 'Premium Mamra almonds support brain function, strengthen bones, and provide healthy fats.')">
+      <img src="images/mamra_badam.jpg" alt="Mamra Badam">
+      <h3>Mamra Badam</h3>
+    </div>
+
+    <div class="product" onclick="openModal('Kashmiri Kahwa', 'Traditional green tea with saffron, aiding digestion, relaxation, and antioxidant support.')">
+      <img src="images/kashmiri_kahwa.jpg" alt="Kashmiri Kahwa">
+      <h3>Kashmiri Kahwa</h3>
+    </div>
+
   </div>
 
-  <!-- MODAL -->
-  <div class="modal" id="productModal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-      <h3 id="modalTitle"></h3>
-      <p id="modalDesc"></p>
-    </div>
+  <div class="order">
+    <h2>📩 Place Your Order</h2>
+    <p>Click below to fill out the order form.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSenX7ibv2AORWIiLmsUKj0qDKWVKm_Lbz13GY9KRxyQzUHsfg/viewform?usp=header" target="_blank">Order Now</a>
   </div>
+</div>
 
-  <script>
-    function openModal(title, desc) {
-      document.getElementById("modalTitle").innerText = title;
-      document.getElementById("modalDesc").innerText = desc;
-      document.getElementById("productModal").style.display = "flex";
-    }
-    function closeModal() {
-      document.getElementById("productModal").style.display = "none";
-    }
-    window.onclick = function(event)
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+
+<script>
+function openModal(title, desc) {
+  document.getElementById("modalTitle").innerText = title;
+  document.getElementById("modalDesc").innerText = desc;
+  document.getElementById("productModal").style.display = "flex";
+}
+function closeModal() {
+  document.getElementById("productModal").style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == document.getElementById("productModal")) {
+    closeModal();
+  }
+}
+</script>
+
+</body>
+</html>
