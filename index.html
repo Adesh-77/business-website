@@ -66,7 +66,8 @@
     }
     .product:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.2); }
     .product img { width: 100%; height: 200px; object-fit: cover; }
-    .product h3 { margin: 0.8rem 0; font-size: 1.2rem; color: #cc6600; }
+    .product h3 { margin: 0.5rem 0 0.3rem; font-size: 1.2rem; color: #cc6600; }
+    .product p.price { margin: 0 0 0.8rem; font-weight: bold; color: #ff6600; }
 
     .order { text-align: center; margin: 3rem 0; }
     .order a {
@@ -82,8 +83,8 @@
       background: white; padding: 2rem; border-radius: 12px; max-width: 400px;
       text-align:center; position:relative; animation: zoomIn 0.3s ease;
     }
-    .modal-content h3 { color: #cc6600; margin-bottom: 1rem; }
-    .modal-content p { font-size: 1rem; margin-bottom: 1rem; }
+    .modal-content h3 { color: #cc6600; margin-bottom: 0.5rem; }
+    .modal-content p { font-size: 1rem; margin-bottom: 0.5rem; }
     .close-btn { position: absolute; top:10px; right:15px; font-size:20px; cursor:pointer; color:#999; }
     .close-btn:hover { color:#333; }
 
@@ -105,54 +106,64 @@
   <h2>✨ Our Products ✨</h2>
   <div class="products">
 
-    <div class="product" onclick="openModal('Saffron', 'Saffron improves immunity, enhances memory, and boosts mood. It also adds premium flavor to dishes.')">
+    <div class="product" onclick="openModal('Saffron', 'Saffron improves immunity, enhances memory, and boosts mood. It also adds premium flavor to dishes.', '₹379 per gram')">
       <img src="images/saffron.jpg" alt="Saffron">
       <h3>Saffron</h3>
+      <p class="price">₹379 / gram</p>
     </div>
 
-    <div class="product" onclick="openModal('Apricot', 'Apricots are rich in vitamins A & C, improve digestion, and promote healthy skin and energy.')">
+    <div class="product" onclick="openModal('Apricot', 'Apricots are rich in vitamins A & C, improve digestion, and promote healthy skin and energy.', '₹1199 per kg')">
       <img src="images/apricot.jpg" alt="Apricot">
       <h3>Apricot</h3>
+      <p class="price">₹1199 / kg</p>
     </div>
 
-    <div class="product" onclick="openModal('Walnuts', 'Walnuts are high in omega-3s, supporting heart, brain, and joint health.')">
+    <div class="product" onclick="openModal('Walnuts', 'Walnuts are high in omega-3s, supporting heart, brain, and joint health.', '₹1599 per kg')">
       <img src="images/walnuts.jpg" alt="Walnuts">
       <h3>Walnuts</h3>
+      <p class="price">₹1599 / kg</p>
     </div>
 
-    <div class="product" onclick="openModal('Shilajit', 'Shilajit increases strength, stamina, and overall vitality naturally.')">
+    <div class="product" onclick="openModal('Shilajit', 'Shilajit increases strength, stamina, and overall vitality naturally.', '₹1499 (50g) / ₹2599 (100g)')">
       <img src="images/shilajit.jpg" alt="Shilajit">
       <h3>Shilajit</h3>
+      <p class="price">₹1499 (50g) / ₹2599 (100g)</p>
     </div>
 
-    <div class="product" onclick="openModal('Blueberry', 'Blueberries are antioxidants-rich, supporting immunity, brain function, and healthy skin.')">
+    <div class="product" onclick="openModal('Blueberry', 'Blueberries are antioxidants-rich, supporting immunity, brain function, and healthy skin.', '₹1399 per kg')">
       <img src="images/blueberry.jpg" alt="Blueberry">
       <h3>Blueberry</h3>
+      <p class="price">₹1399 / kg</p>
     </div>
 
-    <div class="product" onclick="openModal('Cranberry', 'Cranberries help maintain urinary tract health and are packed with antioxidants.')">
+    <div class="product" onclick="openModal('Cranberry', 'Cranberries help maintain urinary tract health and are packed with antioxidants.', '₹1399 per kg')">
       <img src="images/cranberry.jpg" alt="Cranberry">
       <h3>Cranberry</h3>
+      <p class="price">₹1399 / kg</p>
     </div>
 
-    <div class="product" onclick="openModal('High Protein Muesli', 'A healthy breakfast mix of oats, nuts, and dry fruits providing energy and nutrition.')">
+    <div class="product" onclick="openModal('High Protein Muesli', 'A healthy breakfast mix of oats, nuts, and dry fruits providing energy and nutrition.', '₹1299 per kg')">
       <img src="images/high_protein_muesali.jpeg" alt="Muesli">
       <h3>High Protein Muesli</h3>
+      <p class="price">₹1299 / kg</p>
     </div>
 
-    <div class="product" onclick="openModal('Kiwi', 'Kiwi is rich in Vitamin C, boosts immunity, aids digestion, and improves skin health.')">
+    <div class="product" onclick="openModal('Kiwi', 'Kiwi is rich in Vitamin C, boosts immunity, aids digestion, and improves skin health.', '₹999 per kg')">
       <img src="images/kiwi.jpg" alt="Kiwi">
       <h3>Kiwi</h3>
+      <p class="price">₹999 / kg</p>
     </div>
 
-    <div class="product" onclick="openModal('Mamra Badam', 'Premium Mamra almonds support brain function, strengthen bones, and provide healthy fats.')">
+    <div class="product" onclick="openModal('Mamra Badam', 'Premium Mamra almonds support brain function, strengthen bones, and provide healthy fats.', '₹1999 per kg')">
       <img src="images/mamra_badam.jpg" alt="Mamra Badam">
       <h3>Mamra Badam</h3>
+      <p class="price">₹1999 / kg</p>
     </div>
 
-    <div class="product" onclick="openModal('Kashmiri Kahwa', 'Traditional green tea with saffron, aiding digestion, relaxation, and antioxidant support.')">
+    <div class="product" onclick="openModal('Kashmiri Kahwa', 'Traditional green tea with saffron, aiding digestion, relaxation, and antioxidant support.', '₹399 (100g)')">
       <img src="images/kashmiri_kahwa.jpg" alt="Kashmiri Kahwa">
       <h3>Kashmiri Kahwa</h3>
+      <p class="price">₹399 / 100g</p>
     </div>
 
   </div>
@@ -169,13 +180,15 @@
     <span class="close-btn" onclick="closeModal()">&times;</span>
     <h3 id="modalTitle"></h3>
     <p id="modalDesc"></p>
+    <p id="modalPrice" style="font-weight:bold; color:#ff6600;"></p>
   </div>
 </div>
 
 <script>
-function openModal(title, desc) {
+function openModal(title, desc, price) {
   document.getElementById("modalTitle").innerText = title;
   document.getElementById("modalDesc").innerText = desc;
+  document.getElementById("modalPrice").innerText = price;
   document.getElementById("productModal").style.display = "flex";
 }
 function closeModal() {
