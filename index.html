@@ -14,7 +14,7 @@
 
     /* HEADER */
     header {
-      background: url("images/background image.webp") center/cover no-repeat;
+      background: url("images/background_image.webp") center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 4rem 1rem;
@@ -203,7 +203,7 @@
       </div>
 
       <div class="product" onclick="openModal('High Protein Muesli', 'Healthy breakfast mix of oats, nuts, and dry fruits.')">
-        <img src="images/High protein muesali.jpeg" alt="Muesli">
+        <img src="images/high_protein_muesali.jpeg" alt="Muesli">
         <h3>High Protein Muesli</h3>
       </div>
 
@@ -213,12 +213,12 @@
       </div>
 
       <div class="product" onclick="openModal('Mamra Badam', 'Premium mamra almonds known for high oil content.')">
-        <img src="images/Mamra badam.jpg" alt="Mamra Badam">
+        <img src="images/mamra_badam.jpg" alt="Mamra Badam">
         <h3>Mamra Badam</h3>
       </div>
 
       <div class="product" onclick="openModal('Kashmiri Kahwa', 'Traditional Kashmiri green tea with saffron & spices.')">
-        <img src="images/Kashmiri Kahwa.jpg" alt="Kashmiri Kahwa">
+        <img src="images/kashmiri_kahwa.jpg" alt="Kashmiri Kahwa">
         <h3>Kashmiri Kahwa</h3>
       </div>
 
@@ -250,12 +250,4 @@
     function closeModal() {
       document.getElementById("productModal").style.display = "none";
     }
-    window.onclick = function(event) {
-      if (event.target == document.getElementById("productModal")) {
-        closeModal();
-      }
-    }
-  </script>
-
-</body>
-</html>
+    window.onclick = function(event)
