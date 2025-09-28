@@ -91,12 +91,101 @@
     @keyframes fadeInDown { from {opacity:0; transform: translateY(-20px);} to {opacity:1; transform: translateY(0);} }
     @keyframes fadeInUp { from {opacity:0; transform: translateY(20px);} to {opacity:1; transform: translateY(0);} }
     @keyframes zoomIn { from {transform: scale(0.8); opacity:0;} to {transform: scale(1); opacity:1;} }
+
+    /* WHY US SECTION */
+    .why-us{
+      margin:50px auto;
+      padding:30px;
+      background:#f9fafb;
+      border-radius:16px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      text-align:center;
+    }
+    .why-us h2{
+      font-size:28px;
+      margin-bottom:20px;
+      color:#7c3aed;
+    }
+    .reasons{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+      margin-bottom:25px;
+    }
+    .reason{
+      background:#fff;
+      padding:15px;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.05);
+      text-align:left;
+    }
+    .reason h3{margin:0 0 8px;color:#111;font-size:16px;}
+    .reason p{margin:0;font-size:14px;color:#444;}
+    .closing-msg p{
+      font-size:16px;
+      font-weight:600;
+      color:#1f2937;
+    }
+
+    /* CONTACT US SECTION */
+    .contact-us{
+      margin:50px auto;
+      padding:40px 20px;
+      background: #fff7ed;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align:center;
+    }
+    .contact-us h2{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#d97706;
+    }
+    .contact-us p{
+      font-size:16px;
+      color:#4b5563;
+    }
+    .contacts{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:30px;
+      margin-top:25px;
+    }
+    .person{
+      background:#fff;
+      padding:20px;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.05);
+      max-width:300px;
+      text-align:left;
+    }
+    .person h3{
+      margin-top:0;
+      color:#b45309;
+      font-size:18px;
+    }
+    .person p{
+      margin:5px 0;
+      font-size:14px;
+    }
+    .person a{
+      color:#dc6803;
+      text-decoration:none;
+    }
+    .person a:hover{
+      text-decoration:underline;
+    }
+    .quality-msg{
+      margin-top:30px;
+      font-size:16px;
+      color:#92400e;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <!-- LOGO -->
   <img src="images/Logo.jpg" alt="Truehima Naturals Logo" class="logo">
   <h1>🌿 Truehima Naturals 🌿</h1>
   <p>Premium Natural Products from the Himalayas</p>
@@ -106,61 +195,67 @@
   <h2>✨ Our Products ✨</h2>
   <div class="products">
 
-    <div class="product" onclick="openModal('Saffron', 'Saffron improves immunity, enhances memory, and boosts mood. It also adds premium flavor to dishes.', '₹379 per gram')">
+    <div class="product" onclick="openModal('Saffron', 'Direct from Kashmiri Pahadi farmers – pure, handpicked saffron with unmatched aroma & authenticity.', '₹350 / 1g')">
       <img src="images/saffron.jpg" alt="Saffron">
       <h3>Saffron</h3>
-      <p class="price">₹379 / gram</p>
+      <p class="price">₹350 / 1g</p>
     </div>
 
-    <div class="product" onclick="openModal('Apricot', 'Apricots are rich in vitamins A & C, improve digestion, and promote healthy skin and energy.', '₹1199 per kg')">
-      <img src="images/apricot.jpg" alt="Apricot">
-      <h3>Apricot</h3>
-      <p class="price">₹1199 / kg</p>
+    <div class="product" onclick="openModal('Walnut', 'Direct from Kashmiri Pahadi farmers – premium walnuts packed with nutrition, freshness, and natural crunch.', '₹849 / 500g')">
+      <img src="images/walnuts.jpg" alt="Walnut">
+      <h3>Walnut</h3>
+      <p class="price">₹849 / 500g</p>
     </div>
 
-    <div class="product" onclick="openModal('Walnuts', 'Walnuts are high in omega-3s, supporting heart, brain, and joint health.', '₹1599 per kg')">
-      <img src="images/walnuts.jpg" alt="Walnuts">
-      <h3>Walnuts</h3>
-      <p class="price">₹1599 / kg</p>
-    </div>
-
-    <div class="product" onclick="openModal('Shilajit', 'Shilajit increases strength, stamina, and overall vitality naturally.', '₹1499 (50g) / ₹2599 (100g)')">
+    <div class="product" onclick="openModal('Kashmiri Shilajit 50g', 'Direct from Kashmiri Pahadi farmers – authentic Himalayan Shilajit for natural strength, vitality, and wellness.', '₹1549 / 50g')">
       <img src="images/shilajit.jpg" alt="Shilajit">
-      <h3>Shilajit</h3>
-      <p class="price">₹1499 (50g) / ₹2599 (100g)</p>
+      <h3>Kashmiri Shilajit 50g</h3>
+      <p class="price">₹1549 / 50g</p>
     </div>
 
-    <div class="product" onclick="openModal('Blueberry', 'Blueberries are antioxidants-rich, supporting immunity, brain function, and healthy skin.', '₹1399 per kg')">
-      <img src="images/blueberry.jpg" alt="Blueberry">
-      <h3>Blueberry</h3>
-      <p class="price">₹1399 / kg</p>
+    <div class="product" onclick="openModal('Kashmiri Shilajit 100g', 'Direct from Kashmiri Pahadi farmers – authentic Himalayan Shilajit for natural strength, vitality, and wellness.', '₹2699 / 100g')">
+      <img src="images/shilajit.jpg" alt="Shilajit">
+      <h3>Kashmiri Shilajit 100g</h3>
+      <p class="price">₹2699 / 100g</p>
     </div>
 
-    <div class="product" onclick="openModal('Cranberry', 'Cranberries help maintain urinary tract health and are packed with antioxidants.', '₹1399 per kg')">
-      <img src="images/cranberry.jpg" alt="Cranberry">
-      <h3>Cranberry</h3>
-      <p class="price">₹1399 / kg</p>
-    </div>
-
-    <div class="product" onclick="openModal('High Protein Muesli', 'A healthy breakfast mix of oats, nuts, and dry fruits providing energy and nutrition.', '₹1299 per kg')">
-      <img src="images/high_protein_muesali.jpeg" alt="Muesli">
-      <h3>High Protein Muesli</h3>
-      <p class="price">₹1299 / kg</p>
-    </div>
-
-    <div class="product" onclick="openModal('Kiwi', 'Kiwi is rich in Vitamin C, boosts immunity, aids digestion, and improves skin health.', '₹999 per kg')">
-      <img src="images/kiwi.jpg" alt="Kiwi">
-      <h3>Kiwi</h3>
-      <p class="price">₹999 / kg</p>
-    </div>
-
-    <div class="product" onclick="openModal('Mamra Badam', 'Premium Mamra almonds support brain function, strengthen bones, and provide healthy fats.', '₹1999 per kg')">
+    <div class="product" onclick="openModal('Mamra Badam', 'Direct from Kashmiri Pahadi farmers – pure Mamra almonds, rich in taste, crunch, and natural energy.', '₹449 / 250g')">
       <img src="images/mamra_badam.jpg" alt="Mamra Badam">
       <h3>Mamra Badam</h3>
-      <p class="price">₹1999 / kg</p>
+      <p class="price">₹449 / 250g</p>
     </div>
 
-    <div class="product" onclick="openModal('Kashmiri Kahwa', 'Traditional green tea with saffron, aiding digestion, relaxation, and antioxidant support.', '₹399 (100g)')">
+    <div class="product" onclick="openModal('High Protein Muesli', 'Direct from Kashmiri Pahadi farmers – wholesome high-protein muesli for a healthy and energizing start to your day.', '₹299 / 250g')">
+      <img src="images/high_protein_muesali.jpeg" alt="Muesli">
+      <h3>High Protein Muesli</h3>
+      <p class="price">₹299 / 250g</p>
+    </div>
+
+    <div class="product" onclick="openModal('Blueberry', 'Direct from Kashmiri Pahadi farmers – pure dried blueberries, bursting with natural flavor and goodness.', '₹349 / 250g')">
+      <img src="images/blueberry.jpg" alt="Blueberry">
+      <h3>Blueberry</h3>
+      <p class="price">₹349 / 250g</p>
+    </div>
+
+    <div class="product" onclick="openModal('Cranberry', 'Direct from Kashmiri Pahadi farmers – naturally dried cranberries, rich in taste and health benefits.', '₹349 / 250g')">
+      <img src="images/cranberry.jpg" alt="Cranberry">
+      <h3>Cranberry</h3>
+      <p class="price">₹349 / 250g</p>
+    </div>
+
+    <div class="product" onclick="openModal('Kiwi', 'Direct from Kashmiri Pahadi farmers – naturally dried kiwis, tangy, refreshing, and full of nutrients.', '₹249 / 250g')">
+      <img src="images/kiwi.jpg" alt="Kiwi">
+      <h3>Kiwi</h3>
+      <p class="price">₹249 / 250g</p>
+    </div>
+
+    <div class="product" onclick="openModal('Apricot', 'Direct from Kashmiri Pahadi farmers – golden apricots, naturally sweet, healthy, and farm-fresh.', '₹299 / 250g')">
+      <img src="images/apricot.jpg" alt="Apricot">
+      <h3>Apricot</h3>
+      <p class="price">₹299 / 250g</p>
+    </div>
+
+    <div class="product" onclick="openModal('Kashmiri Kahwa', 'Direct from Kashmiri Pahadi farmers – authentic Kashmiri Kahwa for a soothing, aromatic, and traditional taste.', '₹399 / 100g')">
       <img src="images/kashmiri_kahwa.jpg" alt="Kashmiri Kahwa">
       <h3>Kashmiri Kahwa</h3>
       <p class="price">₹399 / 100g</p>
@@ -168,12 +263,61 @@
 
   </div>
 
+<section class="why-us">
+  <h2>🌟 Why Choose Us?</h2>
+  <div class="reasons">
+    <div class="reason">
+      <h3>✅ Direct from Kashmiri Pahadi Farmers</h3>
+      <p>We cut the middlemen — bringing you authentic, farm-fresh products straight from Kashmir to Maharashtra.</p>
+    </div>
+    <div class="reason">
+      <h3>✅ Genuine & Trusted</h3>
+      <p>Every product is handpicked, natural, and tested for authenticity — trust is our biggest promise.</p>
+    </div>
+    <div class="reason">
+      <h3>✅ Premium Quality</h3>
+      <p>Rich aroma, natural taste, and unmatched purity that you won’t find in local markets.</p>
+    </div>
+    <div class="reason">
+      <h3>✅ Affordable Prices</h3>
+      <p>Direct sourcing from farmers ensures you get the best rates without compromising on quality.</p>
+    </div>
+    <div class="reason">
+      <h3>✅ Your Health, Our Priority</h3>
+      <p>We believe in delivering nutrition-packed superfoods that make your lifestyle healthier.</p>
+    </div>
+  </div>
+  <div class="closing-msg">
+    <p><strong>We are different because we care — genuine products, direct from the mountains, delivered with honesty and love ❤️</strong></p>
+  </div>
+</section>
+
   <div class="order">
     <h2>📩 Place Your Order</h2>
     <p>Click below to fill out the order form.</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSenX7ibv2AORWIiLmsUKj0qDKWVKm_Lbz13GY9KRxyQzUHsfg/viewform?usp=header" target="_blank">Order Now</a>
   </div>
 </div>
+
+<section class="contact-us">
+  <h2>📞 Contact Us</h2>
+  <p>We are here to assist you with your orders, queries, and feedback. Your trust and satisfaction are our top priority! 💚</p>
+  <div class="contacts">
+    <div class="person">
+      <h3>Adesh Palwe</h3>
+      <p>📍 Address: Kothrud, Maharashtra 411038</p>
+      <p>📱 WhatsApp: <a href="https://wa.me/919765411947" target="_blank">9765411947</a></p>
+      <p>✉️ Email: <a href="mailto:adeshpalwe777@gmail.com">adeshpalwe777@gmail.com</a></p>
+    </div>
+    <div class="person">
+      <h3>Suyash Babar</h3>
+      <p>📍 Address: Kothrud, Maharashtra 411038</p>
+      <p>📱 WhatsApp: <a href="https://wa.me/919850669140" target="_blank">9850669140</a></p>
+      <p>✉️ Email: <a href="mailto:suyashbabar17@gmail.com">suyashbabar17@gmail.com</a></p>
+    </div>
+  </div>
+  <p class="quality-msg"><strong>We ensure premium quality, genuine products, and quick support — connecting the Himalayas to your home with love and honesty! 🌿</strong></p>
+</section>
 
 <div class="modal" id="productModal">
   <div class="modal-content">
@@ -203,3 +347,4 @@ window.onclick = function(event) {
 
 </body>
 </html>
+
